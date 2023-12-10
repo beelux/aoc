@@ -69,11 +69,10 @@ def part2(lines):
                     current_nodes[index] = nodes[current_nodes[index]][1]
             if(least_steps[index] == -1 and current_nodes[index].endswith("Z")):
                 least_steps[index] = steps
-    multiplication = reduce(lambda x, y: x*y, least_steps)
-    gcd = math.gcd(*least_steps)
 
     return math.lcm(*least_steps)
 
 #print("Part 1: \"" + str(part1(file_input())) + "\"")
 # First try: 155388722128598496968704 - too high
+# Second try: 21083806112641
 print("Part 2: \"" + str(part2(file_input())) + "\"")
